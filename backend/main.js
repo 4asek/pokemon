@@ -20,6 +20,8 @@ async function GetPokemon() {
       image: data.sprites.front_default,
       hp: data.stats[0].base_stat,
     }
+     
+    
     console.log(RDate)
     return RDate
   } catch (error) {
