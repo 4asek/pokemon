@@ -18,10 +18,7 @@ async function getPok(count) {
     const chuvak = await resp.json();
     grid.append(creatCard(chuvak));
   }
-  const pokemon = await Promise.all(req);
-  pokemon.forEach((p) => grid.append(creatCard(p)));
 }
-
 getPok(20);
 
 // fetch(`http://localhost:3000`)
