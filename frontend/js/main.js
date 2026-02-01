@@ -29,7 +29,7 @@ modal.addEventListener(`click`, (e) => {
     modal.style = "none";
   }
 });
-modal.addEventListener(`click`, (e) => {
+close.addEventListener(`click`, () => {
   modal.style = "none";
 });
 
