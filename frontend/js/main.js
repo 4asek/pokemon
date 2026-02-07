@@ -18,19 +18,23 @@ const modal = document.getElementById("modal_id");
 const close = document.querySelector(".close");
 const modal_img = document.getElementById("modal_img");
 const title_m = document.getElementById("title_m");
+const desc_m = document.getElementById("desc_m");
+let count_MODAL = 0;
 function addModal(chuvak) {
   modal_img.src = chuvak.image;
   title_m.textContent = chuvak.name;
   modal.style.display = "flex";
+  desc_m.textContent = chuvak.description;
+  console.log("Відкрили модалку", (count_MODAL += 1));
 }
 
 modal.addEventListener(`click`, (e) => {
   if (e.target === modal) {
-    modal.style = "none";
+    modal.style.display = "none";
   }
 });
 close.addEventListener(`click`, () => {
-  modal.style = "none";
+  modal.style.display = "none";
 });
 
 const grid = document.getElementById(`grid`);
