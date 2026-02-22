@@ -1,0 +1,3 @@
+4. Має бути інфініті скролл. пізда нах - https://github.com/saeedkohansal/Vanilla-JavaScript-Infinite-Scroll-HTML-CSS-JS.git
+7. Якщо розмір екрану юзера - до 480px - має бути тільки 1 "блок" покемона в дяку, якщо більше - скільки влізе.
+

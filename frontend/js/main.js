@@ -39,7 +39,7 @@ close.addEventListener(`click`, () => {
 
 const grid = document.getElementById(`grid`);
 async function getPok(count) {
-  grid.innerHTML = ` `;
+  //grid.innerHTML = ` `;
   for (let i = 0; i < count; i++) {
     const resp = await fetch("http://localhost:3000");
     const chuvak = await resp.json();
@@ -48,18 +48,16 @@ async function getPok(count) {
 }
 getPok(20);
 
-// function addModal(chuvak) {
-//   const modalka = document.getElementById(`modal`);
 
-// }
-// fetch(`http://localhost:3000`)
-//   .then((resp) => {
-//     if (!resp.ok) {
-//       console.log(resp.status)
-//     }
-//     return resp.json()
-//   })
-//   .then((data) => {
-//     console.log(data)
+window.addEventListener('scroll', () => {
+  const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
 
-//   })
+  if (scrollTop + clientHeight >= scrollHeight - 5) {
+    getPok(20);
+
+    // setTimeout(() => {
+    //   PAGE++;
+    //   getPok(20);
+    // }, 500);
+  }
+});
