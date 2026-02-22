@@ -13,13 +13,13 @@ async function GetPokemon() {
       console.log(`щось не так нах я єбу сварка ${resp.status}`);
     }
     const data = await resp.json();
-    const describer = await GetDescr(n);
+    const description = await GetDescr(n);
     const RDate = {
       id: data.id,
       name: data.name,
       image: data.sprites.front_default,
       hp: data.stats[0].base_stat,
-      describer: describer,
+      description: description,
     };
     return RDate;
   } catch (error) {

@@ -63,7 +63,8 @@ img {
 }
 
 .close {
-  color: #aaaaaa;
+  display: flex;
+  justify-content: center;
   float: right;
   font-size: 20px;
   font-weight: bold;
