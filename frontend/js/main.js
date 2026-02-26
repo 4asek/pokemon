@@ -51,10 +51,9 @@ getPok(20);
 
 window.addEventListener('scroll', () => {
   const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-
+  console.log("Кількість запитів")
   if (scrollTop + clientHeight >= scrollHeight - 5) {
     getPok(20);
-
     // setTimeout(() => {
     //   PAGE++;
     //   getPok(20);

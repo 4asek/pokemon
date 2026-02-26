@@ -5,7 +5,7 @@ async function GetPokemon() {
     let random_n = Math.floor(Math.random() * max);
     return random_n;
   }
-  const n = getRandomInt(60);
+  const n = 1 + getRandomInt(60);
   const apiUrl = `https://pokeapi.co/api/v2/pokemon/${n}`;
   try {
     const resp = await fetch(apiUrl);
